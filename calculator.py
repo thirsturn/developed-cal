@@ -1,5 +1,5 @@
 import asyncio, time
-from file import history_f
+from file import history_f, clean
 
 history_file = open("history.txt", "a+")
 
@@ -25,12 +25,15 @@ try:
         answer = number1 ** number2
         return answer
 
+    async def HISTORY():
+        history_f()
+        clean()
+        
 except:
     print("error detected...")
 
 
-async def HISTORY():
-    history_f()
+
 
 async def INPUT():
     try:

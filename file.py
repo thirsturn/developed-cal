@@ -1,16 +1,13 @@
-fo = open("history.txt", "r")
-history = fo.readlines()
+
+
 
 def history_f():
-
+    fo = open("history.txt", "a+")
+    history = fo.readlines()
     for i in range(len(history)):
         print(history[i])
-
     fo.close()
 
-def clean():
 
-    history.clear()
-
-    fo.close()
+  
 

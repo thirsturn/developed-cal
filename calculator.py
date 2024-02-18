@@ -1,5 +1,5 @@
 import asyncio, time
-from file import history_f, clean
+from file import history_f
 
 history_file = open("history.txt", "a+")
 
@@ -27,7 +27,6 @@ try:
 
     async def HISTORY():
         history_f()
-        clean()
         
 except:
     print("error detected...")
